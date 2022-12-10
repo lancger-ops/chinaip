@@ -6,7 +6,9 @@ export PATH="$PATH:/sbin:/usr/sbin:/bin:/usr/bin"
 MAGIC=3c3bd1da74bfa2379ecb01dab861f829
 
 # interface-name tty-device speed local-IP-address remote-IP-address ipparam
-gateway=$6
+# Mac下获取机器的默认网关
+gateway=`netstat -nr | grep '^default' | grep -v 'ppp' | sed 's/default *\([0-9\.]*\) .*/\1/' | awk '{if($1){print $1}}'`
+
 if [ x"$gateway" == x"" ]; then
 	exit
 fi
