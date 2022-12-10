@@ -12,3 +12,11 @@ cd /etc/wireguard
 curl -L -O "https://github.com/lancger-ops/chinaip/raw/master/mac/{ip-up,ip-down}"
 chmod +x ip-up ip-down
 ```
+
+手动添加路由--注意需要切换到管理员用户
+
+```bash
+cd /etc/wireguard
+sh ip-up
+sh ip-down
+```
