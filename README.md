@@ -8,6 +8,7 @@ Mac OS X用户可以直接使用下面命令，下载处理好的文件，放到
 
 ```bash
 mkdir -p /etc/wireguard
+cd /etc/wireguard
 curl -L -O "https://github.com/lancger-ops/chinaip/raw/master/mac/{ip-up,ip-down}"
 chmod +x ip-up ip-down
 ```
