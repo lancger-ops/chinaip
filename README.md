@@ -20,3 +20,28 @@ cd /etc/wireguard
 sh ip-up
 sh ip-down
 ```
+
+查看路由
+```bash
+MacBook-Pro:wireguard root# netstat -nr
+Routing tables
+
+Internet:
+Destination        Gateway            Flags           Netif Expire
+default            link#18            UCSg            utun3
+default            192.168.31.1       UGScIg            en0
+1                  link#18            UCS             utun3
+2                  link#18            UCS             utun3
+3                  link#18            UCS             utun3
+3.209.103.60       link#18            UHWIi           utun3
+4/6                link#18            UCS             utun3
+8/7                link#18            UCS             utun3
+8.8.4.4/32         link#18            UCS             utun3
+8.8.8.8/32         link#18            UCS             utun3
+8.8.8.8            link#18            UHWIi           utun3
+10.8/24            10.8.0.2           UGSc            utun3
+10.8.0.2           10.8.0.2           UH              utun3
+10.9/16            192.168.31.1       UGSc              en0
+11                 link#18            UCS             utun3
+12/6               link#18            UCS             utun3
+```
